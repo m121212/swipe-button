@@ -4,7 +4,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'gnag'
 
 version = '0.8.4'
-group = 'com.github.m121212'
+group = 'com.ebanx'
 
 android {
     compileSdkVersion 26
