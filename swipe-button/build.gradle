@@ -3,18 +3,17 @@ apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'gnag'
 
-version = '0.8.4'
-group = 'com.ebanx'
+group = 'com.github.m121212'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 2
+        versionName "1.0.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -57,12 +56,13 @@ gnag {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.0.0'
-    testCompile 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
 }
 
 if (project.hasProperty("android")) { // Android libraries
@@ -97,13 +97,13 @@ install {
         pom.project {
             name 'SwipeButton'
             description 'A Button enabled by swipe'
-            url 'https://github.com/ebanx/swipe-button/'
-            inceptionYear '2017'
+            url 'https://github.com/m121212/swipe-button/'
+            inceptionYear '2018'
 
             packaging 'aar'
             groupId 'com.ebanx'
             artifactId 'swipe-button'
-            version '0.8.4'
+            version '1.0.0'
 
             licenses {
                 license {
