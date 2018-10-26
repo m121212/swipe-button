@@ -155,6 +155,7 @@ public class SwipeButton extends RelativeLayout {
         final TextView centerText = new TextView(context);
         this.centerText = centerText;
         centerText.setGravity(Gravity.CENTER);
+        centerText.setTypeface(textview.getTypeface(), Typeface.BOLD);
 
         LayoutParams layoutParams = new LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
